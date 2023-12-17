@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 250px;
+    align-items: center;
+}
+
+#child-1 {
+    background-color: red;
+    flex-basis: 150px;
+}
+
+#child-2 {
+    background-color: blue;
+    flex-basis: 200px;
+}
+
+#child-3 {
+    background-color: green;
+    flex-basis: 150px;
+}

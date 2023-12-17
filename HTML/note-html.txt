@@ -1,0 +1,61 @@
+element:
+    - <...> : opening tag
+    - </...> : close tag
+    -> wrap (opening tag, close tag) : la dong goi the mo va the dong.
+
+HTML DOM: co the mo ta qua Object JS.
+
+lear HTML in W3School.
+
+DOM - lien ket giua JS va HTML.
+    + console tren .js -> F12 console show info.
+
+document object: tren trinh duyen.
+    + cung cap function.
+
+    1. Properties
+        + document.body
+        + document.head
+
+    2. Methods
+        + document.getElementById()
+
+HTML Element: la concept trong brower Chrome dinh nghia.
+    - cung cap cac function giup dev tuong tac duoi dang javascript.
+    HTMLElement -> Element -> Node -> EventTarger
+
+    + <con> instanceof <cha>        : check <con> co phai ke thua tu <cha>.
+    + .children         (Element)   -> show cac element con ma process dang tham chieu.
+    + .textContent      (Node)      -> lay ra cac content co type la 'text'.
+    + .createElement(<tag>)         -> tao moi 1 element voi tag tuong ung.
+    + .appendChild      (Node)      -> them 1 element vao cuoi.
+    + .remove           (Element)
+
+ex: document.body instanceof HTMLElement -> true
+    newTodo = document.createElement('p')   // tao element la the <p>
+    newTodo.textContent = 'test'            // gan value la type 'text' cho content
+    newTodo                                 // <p>testing</p>
+    $0.appendChild(newTodo)                 // gan newTodo vao list document.getElementById().
+
+
+innerHTML properties: match property element  trong khi viet context (in textContent)
+
+*) De truy cap vao trong 1 the 'div' nao day.
+    -> thi phai set 'id' cho the.
+    va dung document.getElementById(<'id'>) -> de tuong tac trong the.
+
+
+*) onClick la 1 event ma HTML DOM cung cap. 
+
+*) EvenListener : 1 item trong 'Obser Pattern'
+    -> day dan code 'logic' tu html -> js
+    +) cung cap concept 'trigger' : la nhan 1 'event' va thuc hien function tuong ung.
+
+
+*) Local Storage: luu tru tren brower
+    - localStorage.setItem(key, value)      -> xet gia_tri vao bien
+    - localStorage.getItem(key)             -> goi bien -> lay ra gia_tri
+
+*) Session Storage: co chuc nang nhu localStorage - nhung co thoi gian ngan han.
+    - Dinh nghia cho 1 phien lam viec (open brower -> close brower)
+    +) ung dung muon luu 1 ban sao draft

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> My Blog </h1>
+    <input type="text" id="inp">
+    <button onclick="addItem()">Add</button>
+    <div id="entry1">
+        <h2>Great day bird watching</h2>
+        <p id="p1">Today I saw three ...</p>
+        <p>I took a couple of photos ...</p>
+    </div>
+    <ul id="todo-list">
+
+    </ul>
+    <script src="./main.js" type="text/javascript">
+        // insert a new todo to the list
+        // update content of a list item
+        // remove the last item from list
+        
+        // ----CLI (command line interface) => Web interface--- //
+
+        
+        var todoList = [
+            'Take Shower',
+            'Have a Walk',
+            'Go to Bed'
+        ]
+            
+        function render() {
+            var htmlList = document.getElementById("todo-list")
+            var content = todoList.map(function(item) {
+                return '<li>' + item + '</li>';
+            })
+
+            htmlList.innerHTML = content.join('');
+        }
+
+        function addItem() {
+            var input = document.getElementById('inp')
+            var newItem = input.value;
+
+            todoList.push(newItem)
+
+            render();
+        }
+
+        render();
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+flex-basis: fix cung gia tri px (height | weight) cho tung component trong flex
+
+key word:
+    display: flex           : khai bao su dung flex.
+    flex-direction          : dieu huong cau hinh flex.
+    justify-items           : can chinh cac element trong flex.
+    align-items             : vuong goc voi direction flex.
+    flex-basis              : fix cung gia tri height | weight.
+    flex-grow               : dung khi container con thua cho trong.
+                                (chia % gia san con thua, cho cac element trong flex)
+    flex-shrink             : cong thuc chia, khi view < total (height | weight) px.
+        = 0                 : giu nguyen gia tri cua element, va giam cac element con lai.
+
+    flex-swap               : ung dung khi muon hien thi dan sen nhau.
+    
+
+<selector> {
+    <attributes>;
+    ...    
+}
+
+attributes (key:value)
+
+
+style text - hay dung
+    color: #DDD
+    text-align: center | left | right | justify
+    text-decoration: none | underline | overline | line-through
+    text-transform: uppercase | lowercase | capitalize
+    text-indent: 10px
+    letter-spacing: 5px
+    line-height: 1.2    // a number
+    text-shadow: x y color blur;
+
+custom font -  phong chu
+    font-family: font1, font2, font3
+    font-style: normal | italic
+    font-size: 18px
+    font-weight: normal | bold | 400 | 600
+
+padding - khoang cach giua khung vien vs content
+    padding-top
+    padding-right
+    padding-bottom
+    padding-left
+    padding: top right bottom left;
+    padding: all;
+
+margin - khoang cach giua component voi nhau
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+    margin: top right bottom left;
+    margin: all;
+
+border - khung vien
+    border-width: 2px   - chinh size
+    border-style: solid | dashed | ...  - kieu hien thi duong vien 
+    border-color: red   - chinh mau
+    border: 1px solid red;
+    border-radius: bo goc
+
+tren -> phai -> duoi -> trai
+
+background-color: mau khung 
+    background-color: color         - set mau cho component
+    background-color: transparent   - lam bong - trung voi mau background
+    background-color: gradient      - mau tu bold -> light
+
+I-cons:
+    link: fontawesome.com ...
+    Tuy theo project lua icon theo lib nao.
+
+style link <a>      (code.org)
+    

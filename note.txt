@@ -1,0 +1,16 @@
+router: chia port for device in Local Network. (192.168.x.x)
+    + 192.168... dai dien cho local host.
+
+Global Network: ip chinh la ip cua router.
+
+ip local: check ifconfig (linix)
+    -> other device can connect to server in local network (by ip local server)
+
+ngrok: la 1 service - server thu 3
+    + forword port to global internet.
+    + other device connect server (by ip ngrok generate).
+
+file 'index' - coi nhu file main cua moi folder.
+
+key word:
+    - Forward Port: open port.

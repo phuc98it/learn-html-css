@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+</head>
+<body>
+    <select name="Age" id="age-filter">
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+    </select>
+
+    <table id="student-table"></table>
+
+    <script type="text/javascript">
+        var students = [
+            { name: 'Demo-1', age: 21 },
+            { name: 'Demo-2', age: 22 },
+            { name: 'Demo-3', age: 23 },
+            { name: 'Demo-4', age: 24 },
+            { name: 'Demo-5', age: 25 }
+        ]
+
+        var ageFilter = document.getElementById('age-filter')
+        ageFilter.addEventListener('change', onAgeFilterChange)
+
+        function onAgeFilterChange() {
+            // 1. get current value of the select
+            const ageSelect = parseInt(ageFilter.value);
+
+            // 2. filter the student list by the selected value
+            const filtedStudents = students.filter(function(student) {
+                return student.age === ageSelect;
+            })
+
+            //render
+            render(filtedStudents)
+        }
+
+        function render(students) {
+            var studentTable = document.getElementById('student-table');
+            var content = students.map(function(student) {
+                return '<tr><td>' + student.name + '</td><td>' + student.age + '</td><tr>'
+            })
+
+            studentTable.innerHTML = content.join('')
+        }
+
+        render(students);
+    </script>
+</body>
+</html>
